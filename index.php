@@ -3,6 +3,11 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description"
+    content="Explore comprehensive European population statistics and demographic data on our website. Discover the latest trends, insights, and analysis of population dynamics across European countries. Stay informed with accurate information and visualizations.">
+  <meta name="keywords"
+    content="European population Demographic data Population statistics, European countries Population dynamics, European demographics Population trends, European census data Population analysis, European population growth Population density, Birth rate in Europe, Death rate in Europe, European migration trends, Age distribution in Europe">
+  <meta name="author" content="Uros Zikic">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="style.css">
