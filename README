@@ -1,0 +1,9 @@
+This is a full stack application.
+It's purpose is to use user input to present info and stats on European countries.
+It utilizes front-end JavaScript RESTapi and back-end PHP and SQL database.
+front-end and back-end work seamlessly on the same page.
+API presents general country information, displays the flag, coat of arms and the UN flag (if the country is a member of the UN)
+PHP pulls SQL database and dynamically builds a html table with stats on the country's population changes since year 2000
+
+to make this app work for you, you'll need to set up local SQL database, run database.php once and then run insert.php to fill in the database.
+Afterwards, run index.php and you'll be all set!
