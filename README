@@ -1,9 +1,44 @@
-This is a full stack application.
-It's purpose is to use user input to present info and stats on European countries.
-It utilizes front-end JavaScript RESTapi and back-end PHP and SQL database.
-front-end and back-end work seamlessly on the same page.
-API presents general country information, displays the flag, coat of arms and the UN flag (if the country is a member of the UN)
-PHP pulls SQL database and dynamically builds a html table with stats on the country's population changes since year 2000
+Country Info Web App
 
-to make this app work for you, you'll need to set up local SQL database, run database.php once and then run insert.php to fill in the database.
-Afterwards, run index.php and you'll be all set!
+The Country Info Web App is a dynamic web application that provides basic information about a selected country using front-end APIs and retrieves population-based data from a SQL database for the years 2000 to 2020.
+
+Features:
+Retrieve basic country information (e.g., name, capital, population) from front-end APIs.
+Query a SQL database to fetch population data for a country from 2000 to 2020.
+Display dynamic and interactive user interfaces for a seamless user experience.
+
+Prerequisites:
+Before running the Country Info Web App, ensure you have the following:
+
+1. Web server (e.g., Apache) with PHP support.
+2. MySQL database server.
+3. API key for the country information API (e.g., REST Countries API).
+
+Getting Started:
+Clone the Repository:
+git clone https://github.com/yourusername/Euro-Stats
+
+Navigate to the Project Directory:
+cd country-info-web-app
+
+
+Run the Application: Start your web server and visit the web app in your web browser.
+
+Usage:
+Once the web app is running, you can:
+
+Enter the name of a country in the search bar.
+Retrieve basic information about the selected country.
+Access population data for the years 2000 to 2020 via database queries.
+Database Setup
+To set up the SQL database for population data, follow these steps:
+
+Create a MySQL Database:
+
+Create a new MySQL database and note down the credentials.
+
+Import Database Schema:
+Import the provided SQL schema file (population_data.sql) into your database to create the necessary tables.
+
+
+
