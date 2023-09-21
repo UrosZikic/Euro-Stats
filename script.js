@@ -71,10 +71,8 @@ function search() {
   if (
     searchCountry === "england" ||
     searchCountry === "wales" ||
-    searchCountry ||
-    "scotland" ||
-    searchCountry ||
-    "uk"
+    searchCountry === "scotland" ||
+    searchCountry === "uk"
   ) {
     checkName = "United Kingdom";
   }
@@ -94,10 +92,8 @@ function search() {
     if (
       searchCountry === "england" ||
       searchCountry === "wales" ||
-      searchCountry ||
-      "scotland" ||
-      searchCountry ||
-      "uk"
+      searchCountry === "scotland" ||
+      searchCountry === "uk"
     ) {
       const targetCountry = "United Kingdom";
       apiUrl = `https://restcountries.com/v3.1/name/${targetCountry}`;
