@@ -18,8 +18,14 @@ Getting Started:
 Clone the Repository:
 git clone https://github.com/yourusername/Euro-Stats
 
-Navigate to the Project Directory:
-cd country-info-web-app
+Set up the project:
+*Set up Xampp
+*Set up database inside PHP myadmin MYSQL
+1. Run connect.php in the browser
+2. Run database.php in the browser
+3. open insert.php in your code editor, uncomment the commented code and run the file in the browser
+4. check if database has been set up successfully with data, then run index.php in the browser
+5. Enjoy
 
 
 Run the Application: Start your web server and visit the web app in your web browser.
