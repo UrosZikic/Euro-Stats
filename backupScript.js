@@ -46,11 +46,7 @@ const europeanCountries = [
   "switzerland",
   "ukraine",
   "united kingdom",
-  "uk",
-  "england",
-  "wales",
-  "scotland",
-  "great britain",
+  "Great Britain",
   "vatican",
 ];
 
@@ -62,22 +58,11 @@ document.addEventListener("keydown", function (event) {
   }
 });
 
-// API data acquisition
+// API data aquisition
 function search() {
-  const searchCountryInput = document.querySelector(".search-country");
-  const searchCountry = searchCountryInput.value;
+  const searchCountry = document.querySelector(".search-country").value;
 
   let checkName = searchCountry == "czechia" ? "Czech Republic" : searchCountry;
-  if (
-    searchCountry === "england" ||
-    searchCountry === "wales" ||
-    searchCountry ||
-    "scotland" ||
-    searchCountry ||
-    "uk"
-  ) {
-    checkName = "United Kingdom";
-  }
 
   // this piece of code sets up a cookie, the cookie is passed over to info.php where it can be utilized for SQL manipulation
   document.cookie = "js_var_value = " + checkName;
@@ -90,18 +75,6 @@ function search() {
       searchCountry === "ireland"
         ? `https://restcountries.com/v3.1/alpha?codes=372`
         : `https://restcountries.com/v3.1/name/${searchCountry}`;
-
-    if (
-      searchCountry === "england" ||
-      searchCountry === "wales" ||
-      searchCountry ||
-      "scotland" ||
-      searchCountry ||
-      "uk"
-    ) {
-      const targetCountry = "United Kingdom";
-      apiUrl = `https://restcountries.com/v3.1/name/${targetCountry}`;
-    }
 
     if (searchCountry)
       fetch(apiUrl)
@@ -194,10 +167,47 @@ function search() {
           iframe.src = iframe.src;
           iframe.style.display = "block";
 
-          // Clear the input field
-          searchCountryInput.value = "";
+          // ------------------------------------------------------------------------------------
+
+          // the following block of code loops over the "neighborList" array
+          //and passes each array value to the Async URL
+          //the purpose of this block is to return the array of the selected country's neighbors' flags
+          //       const neighborList = data[0].borders;
+          //       for(let i = 0; i < neighborList.length; i++) {
+          //       const neighborUrl = `https://restcountries.com/v3.1/alpha?codes=${data[0].borders[i]}`;
+          //       fetch(neighborUrl)
+          //       .then((response) => {
+          //         return response.json();
+          //       })
+          //         .then((data) => {
+
+          //           const neighbor = document.querySelector('.neighbor');
+          //           const neighborFlag = data[0].flags.png;
+          //           let imageLi = document.createElement('img');
+          //           imageLi.src = neighborFlag;
+          //           imageLi.alt = "Flag image";
+          //           neighbor.appendChild(imageLi);
+          //         })
+          //       };
         });
-  } else {
-    searchCountryInput.value = "";
   }
 }
+// This block of code utilizies ASYNC to send values from JS to PHP
+// function getData() {
+//   var tar_country = document.querySelector('.search-country').value;
+
+//   if (tar_country.length > 1) {
+//     let xhttp = new XMLHttpRequest();
+
+//     xhttp.onreadystatechange = function() {
+//       if (xhttp.readyState === 4 && xhttp.status === 200) {
+//         // Handle the response from the PHP script here
+//         var response = xhttp.responseText;
+//         console.log(response);
+//       }
+//     };
+
+//     xhttp.open("POST", "index.php?country=" + encodeURIComponent(tar_country));
+//     xhttp.send();
+//   }
+// }

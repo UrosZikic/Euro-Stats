@@ -676,5 +676,5 @@ VALUES
 // $result = $conn->query($querySwitzerland);
 // $result = $conn->query($queryUkraine);
 // $result = $conn->query($queryUk);
-$result = $conn->query($queryVatican);
+// $result = $conn->query($queryVatican);
 ?>
