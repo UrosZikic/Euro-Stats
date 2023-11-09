@@ -2,6 +2,8 @@ Country Info Web App
 
 The Country Info Web App is a dynamic web application that provides basic information about a selected country using front-end APIs and retrieves population-based data from a SQL database for the years 2000 to 2020.
 
+VIEW SITE: https://euro-stats.000webhostapp.com/index.php
+
 Features:
 Retrieve basic country information (e.g., name, capital, population) from front-end APIs.
 Query a SQL database to fetch population data for a country from 2000 to 2020.
